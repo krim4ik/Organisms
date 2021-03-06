@@ -114,7 +114,7 @@ def make_energy_vs_similarity_results_Main(path_to_ga_trial, rCut, clusters_to_c
 	folder_path = path_to_ga_trial+'/Similarity_Investigation_Data'
 	make_dir(folder_path)
 	# Processing data methods
-	clusters_to_compare_against = 
+	clusters_to_compare_against = minimise_cluster(clusters_to_compare_against, calculator)
 	processing_genetic_algorithm_data(path_to_ga_trial, rCut, clusters_to_compare_against, calculator, folder_path, no_of_cpus=1)
 	energy_and_ga_data, similarity_data = place_genetic_algorithm_data_in_memory(path_to_ga_trial, clusters_to_compare_against, folder_path)
 	# plotting data methods
